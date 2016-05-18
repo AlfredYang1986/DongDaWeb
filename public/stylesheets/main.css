@@ -1,0 +1,568 @@
+@font-face{ 
+	font-family: 'App-ST';
+	src: url('/assets/font/pingfang_light-webFont.eot');
+	src: url('/assets/font/pingfang_light-webFont.eot?#iefix') format('embedded-opentype'),
+	     url('/assets/font/pingfang_light-webFont.woff') format('woff'),
+	     url('/assets/font/pingfang_light-webFont.ttf') format('truetype'),
+	     url('/assets/font/pingfang_light-webFont.svg#webfont') format('svg');
+
+	font-weight: normal;    
+    font-style: normal; 
+}
+
+@font-face{ 
+	font-family: 'App-San';
+	src: url('/assets/font/sanfranciscodisplay-light-webfont.eot');
+	src: url('/assets/font/sanfranciscodisplay-light-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('/assets/font/sanfranciscodisplay-light-webfont.woff') format('woff'),
+	     url('/assets/font/sanfranciscodisplay-light-webfont.ttf') format('truetype'),
+	     url('/assets/font/sanfranciscodisplay-light-webfont.svg#webfont') format('svg');
+
+	font-weight: normal;    
+    font-style: normal; 
+}
+
+* {
+	/*font-family: "App-ST", "App-San," "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: PingFangSC-Regular, sans-serif;
+	font-family: PingFangSC-Ultralight, sans-serif;
+	font-family: PingFangSC-Light, sans-serif;
+	font-family: PingFangSC-Thin, sans-serif;
+	font-family: PingFangSC-Medium, sans-serif;
+	font-family: PingFangSC-Semibold, sans-serif;
+	/*font-family: "App-ST", "App-San,";*/
+}
+
+
+/*************************************************/
+/**
+ * main container
+ */
+.head-page {
+	margin: 0 auto;
+	margin-top: 0 !important;
+	/*width: 1024px;*/
+	width: 100%;
+	height: 1308px;
+	position: relative;
+}
+
+.head-page-bkg {
+	background-image: url("/assets/images/bkg-head.png");
+	background-repeat: no-repeat;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+	height: 520px;
+}
+
+.head-botton-container {
+	/*margin: 0 auto;*/
+	width: 100%;
+	height: 268px;
+	background-image: url("/assets/images/bkg-color.jpg");
+	background-repeat: repeat;
+}
+
+.login-page {
+	margin: 0 auto;
+	margin-top: 0 !important;
+	width: 1024px;
+	height: 520px;
+	background-color: white;
+}
+
+.description-page {
+	margin: 0 auto;
+	width: 1024px;
+	height: 500px;
+/*	background-image: url("/assets/images/bkg-color.jpg");
+	background-repeat: repeat;*/
+}
+
+.comunity-page {
+	margin: 0 auto;
+	width: 1024px;
+	height: 768px;
+/*	background-image: url("/assets/images/bkg-comunity.png");
+	background-repeat: no-repeat;*/
+}
+
+.foot-container {
+	/*margin: 0 auto;*/
+	width: 100%;
+	height: 434px;
+	background-color: gray;
+}
+
+.foot-page {
+	margin: 0 auto;
+	width: 1024px;
+	height: 434px;
+	/*background-color: gray;*/
+}
+
+/*************************************************/
+/**
+ * head
+ */
+.head-logo {
+	margin-top: 18px;
+	margin-left: 38px;
+	background-color: transparent;
+}
+
+.head-btn-group {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 14px;
+	margin-left: -4px;
+}
+
+.head-app-download-btn {
+	font-size: 18px !important;
+	background-image: none !important;
+	background-color: transparent;
+	border: none;
+	color: rgba(0, 0, 0, 0.7);
+	font-family: "PingFangSC-Light";
+}
+
+.head-app-download-btn:hover:focus:active {
+	border: none;
+}
+
+.head-android-download-span {
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 18px !important;
+	/*font-weight: 300;*/
+	/*letter-spacing: 10px;*/
+	margin-top: 10px;
+	/*font-family: "App-ST";*/
+	font-family: "PingFangSC-Light";
+	margin-left: 10px;
+}
+
+.head-str {
+	margin-top: 94px;
+}
+
+.head-title {
+	font-size: 36px;
+	color: rgba(255, 255, 255, 0.85);
+	text-align: center;
+	letter-spacing: 0px;
+	/*font-weight: 500;*/
+	font-family: "PingFangSC-Medium";
+}
+
+.head-detail {
+	font-size: 24px;
+	color: rgba(255, 255, 255, 0.85);
+	text-align: center;
+	letter-spacing: 0px;
+	/*font-weight: 100;*/
+	font-family: "PingFangSC-Light";
+}
+
+.head-bottom-menu {
+	bottom: 0px;
+	/*left: 0px;*/
+	margin: 0 auto;
+	width: 1024px;
+	height: 268px;
+	/*background-image: url("/assets/images/bkg-color.jpg");*/
+	/*background-repeat: repeat;*/
+	/*position: absolute;*/
+}
+
+.head-bottom-table {
+	width: 100%;
+	height: 100%;
+}
+
+.head-bottom-menu table td { 
+	/*border:1px solid #ffffff;*/
+} 
+
+.head-bottom-head-cell {
+	font-size: 28px;
+	text-align: center;
+	color: white;
+	/*font-weight: 400;*/
+	letter-spacing: 0px;
+	height: 63px;
+	padding-top: 37px;
+	font-family: "PingFangSC-Semibold";
+}
+
+.head-bottom-icon-cell {
+	text-align: center;
+	padding-top: 10px;
+	vertical-align: bottom;
+}
+
+.head-bottom-sub-cell {
+	color: white;
+	text-align: center;
+	line-height: 28px;
+	font-size: 20px;
+	/*font-weight: bold;*/
+	font-family: "PingFangSC-Regular";
+	width: 25%;
+	padding-top: 4px;
+	/*font-weight: 200;*/
+}
+
+.head-bottom-cell {
+	text-align: center;
+	width: 25%;
+	vertical-align: top;
+	padding: 0 20px;
+	padding-top: 0px;
+}
+
+.head-bottom-cell-text {
+	font-family: "PingFangSC-Thin";
+	font-size: 14px;
+	color: white;
+	margin-bottom: 0;
+	line-height: 24px;
+}
+
+.head-btn-group {
+	text-align: center;
+	/*right: 120px;*/
+	/*top: 450px;*/
+}
+
+.head-login-btn-container {
+	text-align: center;
+	margin-top: 82px;
+}
+
+.head-login-btn {
+	padding: 19px 67px !important;
+	text-align: center;
+	font-size: 24px !important;
+	letter-spacing: 1px;
+	color: #ffffff;
+	/*opacity: 0.4;*/
+	/*background-image: url("/assets/images/bkg-apply.png") !important;*/
+	background-repeat: repeat;
+	background-color: rgba(255, 255, 255, 0.4) !important;
+	border: none;
+	border-radius: 2px;
+	font-family: "PingFangSC-Medium";
+}
+
+.head-login-btn:hover {
+	color: #ffffff;
+	/*background-image: url("/assets/images/bkg-apply-hover.png") !important;*/
+	background-repeat: repeat;
+	background-color: rgb(74, 74, 74) !important;
+}
+
+/*************************************************/
+/**
+ * login
+ */
+.login-table {
+	/*width: 60%;*/
+	/*margin: 0 auto;*/
+	margin-top: 3px;
+}
+
+.login-title {
+	font-size: 14px;
+	line-height: 30px;
+	padding-top: 12px;
+	padding-bottom: 0px;
+	font-family: "PingFangSC-Medium";
+}
+
+.login-input {
+	font-size: 1.5em !important;
+	height: 38px !important;
+	width: 288px;
+	border-width: 2px !important;
+}
+
+.login-des {
+	margin-top: 40px;
+	font-size: 2em;
+}
+
+.login-place-holder {
+	height: 100px;j
+	width: 100%;
+}
+
+.login-merge-cell {
+	text-align: center;
+	padding-top: 9px;
+	/*margin-top: 30px;*/
+	/*min-height: 60px;*/
+}
+
+.login-merge-cell-text {
+	color: rgb(155, 155, 155);
+	font-size: 12px;
+	vertical-align: bottom;
+	font-family: "PingFangSC-Regular";
+}
+
+.login-marge-error {
+	color: rgb(255, 96, 100);
+	font-size: 14px;
+	text-align: center;
+	margin-top: 10px;
+	font-family: "PingFangSC-Regular";
+}
+
+.login-right-title {
+	margin-top: -2px;
+	text-align: center;
+	font-size: 28px;
+	color: rgb(74, 74, 74);
+	font-family: "PingFangSC-Semibold";
+}
+
+.login-right-title-span {
+	font-family: "PingFangSC-Semibold";
+	font-size: 48px;
+	letter-spacing: 0px;
+	color: rgb(70, 219, 202);
+}
+ 
+.login-right-title-line-1 {
+	line-height: 68px;
+	vertical-align: top;
+	font-family: "PingFangSC-Semibold";
+	font-size: 36px;
+	letter-spacing: 0px;
+	color: rgb(74, 74, 74);
+	padding-bottom: 1px;
+	margin-left: -10px;
+}
+
+.login-right-subtitle {
+	margin-top: 22px !important;
+	font-size: 14px;
+	text-align: center;
+	color: rgb(74, 74, 74);
+	margin-top: 30px;
+	padding: 0 30px;
+	letter-spacing: 0px;
+	font-family: "PingFangSC-Regular";
+	line-height: 24px;
+}
+
+.login-right-table-head {
+	padding-top: 30px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.login-right-table-title {
+	font-size: 13px;
+	line-height: 22px;
+	text-align: center;
+	padding-top: 20px;
+	color: rgb(74, 74, 74);
+	padding-bottom: 10px;
+	font-family: "PingFangSC-Semibold";
+}
+
+.login-right-table-text {
+	font-size: 12px;
+	text-align: center;
+	color: rgb(74, 74, 74);
+	margin-bottom: 0;
+	font-family: "PingFangSC-Regular";
+	/*line-height: 19px;*/
+	/*min-height: 80px;*/
+}
+
+.login-merge-cell-submit-btn {
+	margin-top: 10px;
+	text-align: center;
+	padding: 14px 61px !important;
+	text-align: center;
+	font-size: 18px !important;
+	color: #ffffff;
+	background-image: url("/assets/images/bkg-register.png") !important;
+	background-repeat: repeat;
+	background-color: #9b9b9b !important;
+	border-radius: 4px;
+	border: none;
+	letter-spacing: 4px;
+	font-family: "PingFangSC-Regular";
+}
+
+.login-merge-cell-submit-btn:hover {
+	color: #ffffff !important;
+	background-image: url("/assets/images/bkg-register-hover.png") !important;
+	background-repeat: repeat;
+	background-color: #4a4a4a !important;
+}
+
+/*************************************************/
+/**
+ * description
+ */
+.des-table {
+ 	width: 80%;
+ 	margin: 0 auto;
+ 	margin-top: 80px;
+ }
+
+.des-cell-title {
+	color: #ffffff;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.des-cell-text {
+ 	color: #ffffff;
+ 	font-weight: lighter;
+ 	font-size: 1.5em;
+ }
+
+/*************************************************/
+/**
+ * comunity
+ */
+.comunity-table {
+	width: 100%;;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.comunity-title {
+	font-size: 2.5em;
+	text-align: center;
+	letter-spacing: 10px;
+	font-weight: 500;
+	padding-top: 5px;
+}
+
+.comunity-img {
+	background-repeat:no-repeat;
+	/*background-attachment:fixed;*/
+	background-position:center;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:auto 100%;
+    background-size:auto 95%;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 49px;
+	height: 428px;
+}
+
+.comunity-relative-container {
+	position: relative;
+}
+
+.comunity-text {
+	position: absolute;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: "PingFangSC-Thin";
+	/*font-weight: lighter;*/
+	right: 0px;
+	top: 12px;
+	width: 116px;
+	height: 38px;
+	vertical-align: middle;
+	padding-top: 7px;
+	color: #fff;
+	background-image: url("/assets/images/comunity-top-bkg.png") !important;
+	background-repeat: repeat;
+	border: none;
+}
+
+.comunity-des-text {
+	margin-top: -20px;
+	margin-bottom: 21px !important;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 14px;
+	/*font-weight: 300;*/
+	letter-spacing: 3px;
+	line-height: 25px;
+	color: rgb(74, 74, 74);
+	font-family: "PingFangSC-Light";
+}
+
+.img-1 {
+	background-image: url("/assets/images/s1.png");
+}
+
+.img-2 {
+	background-image: url("/assets/images/s2.png");
+}
+
+.img-3 {
+	background-image: url("/assets/images/s3.png");
+}
+
+/*************************************************/
+/**
+ * foot
+ */
+.foot-table {
+	margin: 0 auto;
+	width: 72%;
+	margin-top: 60px !important;
+	font-family: "PingFangSC-Semibold";
+}
+
+.foot-company-title {
+	margin-top: 10px;
+	color: white;
+	font-family: "PingFangSC-Regular";
+	font-size: 14px;
+}
+
+.foot-company-text {
+	color: white;
+	font-family: "PingFangSC-Thin";
+}
+
+.foot-company-text-line-2 {
+	padding-top: 58px;
+}
+
+.foot-company-text-line-3 {
+	line-height: 0px;
+	font-size: 14px;
+}
+
+.foot-company-text-line-follow {
+	font-family: "PingFangSC-Regular";
+	font-size: 14px;
+}
+
+.foot-dropdown {
+	background-image: linear-gradient(to bottom,#9b9b9b 0,#9b9b9b 100%) !important;
+	background-color: #9b9b9b !important;
+	border-color: 1px solid #9b9b9b !important;
+	width: 290px;
+	height: 54px;
+	text-align: left !important;
+	line-height: 54px !important;
+	color: white !important;
+	letter-spacing: 3px;
+	font-size: 18px;
+	padding: 0px 12px !important;
+	font-family: "PingFangSC-Regular";
+}
+
+.foot-dropdown :hover {
+	background-image: linear-gradient(to bottom,#9b9b9b 0,#9b9b9b 100%) !important;
+	background-color: #9b9b9b !important;
+	border-color: 1px solid #9b9b9b !important;
+}
