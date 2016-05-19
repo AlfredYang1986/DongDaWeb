@@ -15,7 +15,7 @@
 			</div>
 			<div class="head-login-btn-container">
 				<div class="row">
-					<button class=" head-login-btn">申请加入社区</button>
+					<button class=" head-login-btn" onclick="fold()">申请加入社区</button>
 				</div>
 			</div>
 			<div class="head-btn-group">
@@ -26,7 +26,7 @@
 				<span class="head-android-download-span">即将上线</span>
 			</div>
 		</div>
-		<div class="login-page">
+		<div class="login-page paper">
 			<div style="margin-top:0">&nbsp;&nbsp;</div>
 			<div class="row">
 				<div class="col-xs-6"> 
@@ -265,7 +265,27 @@
 		</div>
 	</div>
 } {
+	<script src="@routes.Assets.at("javascripts/oridomi.min.js")"></script>
 	<script type="text/javascript">
+		// var folded = new OriDomi('.paper');
+		// folded.disableTouch();
+		// folded.stairs(0, 'top');
+		var isShown = true;
+
+		function fold() {
+			if (isShown) {
+				$('.paper').animate({"height":"0px"});
+				$('.paper').hide(0, function(){
+					isShown = false;
+				});
+			} else {
+				$('.paper').show(0, function(){
+					isShown = true;
+				});
+				$('.paper').animate({"height":"520px"});
+			}
+		}
+
 		function change2Email() {
 			var html = '<td class="login-title">';
 			html +=	'<div class="row" style="margin: 0px">';
@@ -338,14 +358,21 @@
             var p = $('div[data-regtype="phone"');
 			var e = $('div[data-regtype="email"');
 
+			var phone = $('input[name="phone"]').val();
+			var email = $('input[name="email"]').val();
+
 			if (p.length > 0) {
-				query_object['name'] = name;
-	            query_object['dob'] = dob;
-	            query_object['city'] = city;
+				query_object['reg-type'] = "phone";
+	            query_object['phone'] = phone;
+			} else if (e.length > 0) {
+				query_object['reg-type'] = "email";
+	            query_object['email'] = email;
+			} else {
+				return;
 			}
 
             $.ajax({
-                url: "/auth/register",
+                url: "/register",
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json, charset=utf-8',
@@ -353,6 +380,7 @@
                 cache: false,
                 success: function (data) {
                     if (data.status == "ok") {
+                    	alert("注册成功");
                     } else {
                         alert(data.error.message);
                     }
@@ -361,11 +389,6 @@
                     alert("发布失败，请检查您的输入");
                 }
             });
-
-
-
-			var phone = $('input[name="phone"]').val();
-			var email = $('input[name="email"]').val();
 		}
 	</script>
 }
