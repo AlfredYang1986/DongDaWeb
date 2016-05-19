@@ -260,7 +260,7 @@
 	color: #ffffff;
 	/*background-image: url("/assets/images/bkg-apply-hover.png") !important;*/
 	background-repeat: repeat;
-	background-color: rgb(74, 74, 74) !important;
+	background-color: rgba(74, 74, 74, 0.6) !important;
 }
 
 /*************************************************/
@@ -405,6 +405,14 @@
 	background-image: url("/assets/images/bkg-register-hover.png") !important;
 	background-repeat: repeat;
 	background-color: #4a4a4a !important;
+}
+
+.login-change-a {
+	cursor: pointer;
+}
+
+.login-change-a:hover {
+	text-decoration: none;
 }
 
 /*************************************************/

@@ -49,17 +49,19 @@
 						<tr>
 							<td><input type="text" class="login-input form-control" name="city"></td>
 						</tr>		
-						<tr>
+						<tr id="change-title">
 							<td class="login-title">
 								<div class="row" style="margin: 0px">
 									<span>联系方式</span>
-									<span class="pull-right"><a class="">邮箱注册</a></span>
+									<span class="pull-right"><a class="login-change-a" onclick="change2Email()">邮箱注册</a></span>
 								</div>	
 							</td>
 						</tr>
-						<tr>
-						<tr>
-							<td><input type="text" class="login-input form-control" name="phone"></td>
+						<tr id="change-content">
+							<td>
+								<input type="text" class="login-input form-control" placeholder="+86" name="phone">
+								<div data-regtype="phone" class="hidden"></div>
+							</td>
 						</tr>
 						<tr>
 							<td class="login-merge-cell">
@@ -67,13 +69,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="login-marge-cell">
+							<td id='error-msg' class="login-marge-cell hidden">
 								<p class="login-marge-error">请确认你输入了正确的手机号</p>
 							</td>
 						</tr>
 						<tr>
 							<td class="login-merge-cell" style="padding-top: 0">
-								<button class="login-merge-cell-submit-btn">提 交</button>
+								<button class="login-merge-cell-submit-btn" onclick="submit()">提 交</button>
 							</td>
 						</tr>
 					</table>
@@ -216,6 +218,7 @@
 				</tr>
 				<tr>
 					<td colspan="1" width="50%">
+
 						<div class="btn-group" style="width:60%">
 						  	<a class="btn dropdown-toggle foot-dropdown" data-toggle="dropdown" href="#">
 						    	中文
@@ -262,5 +265,107 @@
 		</div>
 	</div>
 } {
+	<script type="text/javascript">
+		function change2Email() {
+			var html = '<td class="login-title">';
+			html +=	'<div class="row" style="margin: 0px">';
+			html += '<span>联系方式</span>';
+			html += '<span class="pull-right"><a class="login-change-a" onclick="change2Phone()">手机注册</a></span>'
+			html += '</div></td>'
+			$('#change-title').html(html);
 
+			html = '<td><input type="text" class="login-input form-control" name="email">';
+			html += '<div data-regtype="email" class="hidden"></div></td>';
+			$('#change-content').html(html);
+		}
+
+		function change2Phone() {
+			var html = '<td class="login-title">';
+			html +=	'<div class="row" style="margin: 0px">';
+			html += '<span>联系方式</span>';
+			html += '<span class="pull-right"><a class="login-change-a" onclick="change2Email()">邮件注册</a></span>'
+			html += '</div></td>'
+			$('#change-title').html(html);
+
+			html = '<td><input type="text" class="login-input form-control" placeholder="+86" name="phone">'
+			html += '<div data-regtype="phone" class="hidden"></div></td>';
+			$('#change-content').html(html);
+		}
+
+		function inputValidation(str) {
+			if ($.trim(str) == '') {
+				var html = '<p class="login-marge-error">以上所有都必须填写</p>'
+				$('#error-msg').html(html);
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		function phoneValidation(phone) {
+			var reg=/^(+d{2,3}-)?d{11}$/; 
+			var result = reg.test(phone);
+			if (!result) {
+				var html = '<p class="login-marge-error">请确认你输入了正确的手机号码</p>'
+				$('#error-msg').html(html);
+			}
+			return result;
+		}
+
+		function emailValidation(email) {
+			var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+			var result = reg.test(email);
+			if (!result) {
+				var html = '<p class="login-marge-error">请确认你输入了正确的邮箱地址</p>'
+				$('#error-msg').html(html);
+			}
+			return result;
+		}
+
+		function submit() {
+			var name = $('input[name="name"]').val();
+			var dob = $('input[name="dob"]').val();
+			var city = $('input[name="city"]').val();
+
+			var validate = inputValidation(name) && inputValidation(dob) && inputValidation(city);
+			if (!validate) return;
+
+			var query_object = new Object();
+            query_object['name'] = name;
+            query_object['dob'] = dob;
+            query_object['city'] = city;
+
+            var p = $('div[data-regtype="phone"');
+			var e = $('div[data-regtype="email"');
+
+			if (p.length > 0) {
+				query_object['name'] = name;
+	            query_object['dob'] = dob;
+	            query_object['city'] = city;
+			}
+
+            $.ajax({
+                url: "/auth/register",
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json, charset=utf-8',
+                data: JSON.stringify(query_object),
+                cache: false,
+                success: function (data) {
+                    if (data.status == "ok") {
+                    } else {
+                        alert(data.error.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("发布失败，请检查您的输入");
+                }
+            });
+
+
+
+			var phone = $('input[name="phone"]').val();
+			var email = $('input[name="email"]').val();
+		}
+	</script>
 }
