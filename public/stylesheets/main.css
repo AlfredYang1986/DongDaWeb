@@ -92,7 +92,7 @@
 	/*margin: 0 auto;*/
 	width: 100%;
 	height: 434px;
-	background-color: gray;
+	background-color: rgb(93, 93, 93);
 }
 
 .foot-page {
@@ -136,7 +136,7 @@
 	color: rgba(0, 0, 0, 0.7);
 	font-size: 18px !important;
 	/*font-weight: 300;*/
-	/*letter-spacing: 10px;*/
+	letter-spacing: 4px;
 	margin-top: 10px;
 	/*font-family: "App-ST";*/
 	font-family: "PingFangSC-Light";
@@ -148,7 +148,7 @@
 }
 
 .head-title {
-	font-size: 36px;
+	font-size: 42px;
 	color: rgba(255, 255, 255, 0.85);
 	text-align: center;
 	letter-spacing: 0px;
@@ -178,7 +178,7 @@
 
 .head-bottom-table {
 	width: 100%;
-	height: 100%;
+	height: 92%;
 }
 
 .head-bottom-menu table td { 
@@ -192,20 +192,22 @@
 	/*font-weight: 400;*/
 	letter-spacing: 0px;
 	height: 63px;
-	padding-top: 37px;
-	font-family: "PingFangSC-Semibold";
+	padding-top: 22px;
+	padding-bottom: 17px;
+	font-family: "PingFangSC-Medium";
 }
 
 .head-bottom-icon-cell {
 	text-align: center;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	vertical-align: bottom;
 }
 
 .head-bottom-sub-cell {
 	color: white;
 	text-align: center;
-	line-height: 28px;
+	line-height: 33px;
 	font-size: 20px;
 	/*font-weight: bold;*/
 	font-family: "PingFangSC-Regular";
@@ -242,7 +244,7 @@
 }
 
 .head-login-btn {
-	padding: 19px 67px !important;
+	padding: 12px 68px !important;
 	text-align: center;
 	font-size: 24px !important;
 	letter-spacing: 1px;
@@ -260,7 +262,7 @@
 	color: #ffffff;
 	/*background-image: url("/assets/images/bkg-apply-hover.png") !important;*/
 	background-repeat: repeat;
-	background-color: rgba(74, 74, 74, 0.6) !important;
+	background-color: rgba(50, 50, 50, 0.8) !important;
 }
 
 /*************************************************/
@@ -282,7 +284,7 @@
 }
 
 .login-input {
-	font-size: 1.5em !important;
+	font-size: 16px !important;
 	height: 38px !important;
 	width: 288px;
 	border-width: 2px !important;
@@ -308,7 +310,7 @@
 .login-merge-cell-text {
 	color: rgb(155, 155, 155);
 	font-size: 12px;
-	vertical-align: bottom;
+	vertical-align: top;
 	font-family: "PingFangSC-Regular";
 }
 
@@ -356,6 +358,7 @@
 	letter-spacing: 0px;
 	font-family: "PingFangSC-Regular";
 	line-height: 24px;
+	margin-bottom: 30px;
 }
 
 .login-right-table-head {
@@ -368,14 +371,15 @@
 	font-size: 13px;
 	line-height: 22px;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 17px;
 	color: rgb(74, 74, 74);
-	padding-bottom: 10px;
+	/*padding-bottom: 10px;*/
 	font-family: "PingFangSC-Semibold";
 }
 
 .login-right-table-text {
 	font-size: 12px;
+	line-height: 20px;
 	text-align: center;
 	color: rgb(74, 74, 74);
 	margin-bottom: 0;
@@ -385,30 +389,32 @@
 }
 
 .login-merge-cell-submit-btn {
-	margin-top: 10px;
+	margin-top: 50px;
 	text-align: center;
-	padding: 14px 61px !important;
+	padding: 8px 55px !important;
 	text-align: center;
 	font-size: 18px !important;
 	color: #ffffff;
-	background-image: url("/assets/images/bkg-register.png") !important;
-	background-repeat: repeat;
-	background-color: #9b9b9b !important;
-	border-radius: 4px;
+	/*background-image: url("/assets/images/bkg-register.png") !important;
+	background-repeat: repeat;*/
+	background-color: rgb(175, 175, 175); !important;
+	border-radius: 2px;
 	border: none;
-	letter-spacing: 4px;
+	letter-spacing: 8px;
 	font-family: "PingFangSC-Regular";
 }
 
 .login-merge-cell-submit-btn:hover {
 	color: #ffffff !important;
-	background-image: url("/assets/images/bkg-register-hover.png") !important;
-	background-repeat: repeat;
+	background-color: rgb(120, 120, 120);
 	background-color: #4a4a4a !important;
 }
 
 .login-change-a {
 	cursor: pointer;
+	font-size: 12px;
+	font-family: "PingFangSC-Regular";
+	color: #337ab7;
 }
 
 .login-change-a:hover {
@@ -449,11 +455,12 @@
 }
 
 .comunity-title {
-	font-size: 2.5em;
+	font-size: 36px;
+	color: rgb(74, 74, 74);
 	text-align: center;
-	letter-spacing: 10px;
+	letter-spacing: 5px;
 	font-weight: 500;
-	padding-top: 5px;
+	padding-top: 18px;
 }
 
 .comunity-img {
@@ -490,6 +497,12 @@
 	background-image: url("/assets/images/comunity-top-bkg.png") !important;
 	background-repeat: repeat;
 	border: none;
+}
+
+.comunity-text:hover {
+	background-image: none !important;
+	background-color: rgba(70, 219, 202, 0.9) !important;
+	cursor: pointer;
 }
 
 .comunity-des-text {
