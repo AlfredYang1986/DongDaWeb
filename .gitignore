@@ -12,3 +12,6 @@
 /.project
 /.settings
 *.swp
+/.idea
+/.sbt-dist
+/scripts
