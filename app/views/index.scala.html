@@ -1,20 +1,180 @@
-@*
- * This template takes a two arguments, a String containing a
- * message to display and an AssetsFinder to locate static assets.
- *@
-@(message: String)(implicit assetsFinder: AssetsFinder)
+@(implicit assetsFinder: AssetsFinder)
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play", assetsFinder) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>咚哒</title>
+    <link rel="stylesheet" href="@assetsFinder.path("bootstrap/css/bootstrap.min.css")" >
+    <link rel="stylesheet" media="screen" href="@assetsFinder.path("stylesheets/style.css")">
+    <link rel="shortcut icon" type="image/png" href="@assetsFinder.path("images/webtabicon.png")">
+    <script type="text/javascript" src="@assetsFinder.path("javascripts/jquery-3.3.1.min.js")" ></script>
+</head>
+<body>
+    <div class="head">
+        <div class="container-fluid" >
+            <div class="header">
+                <div class="container">
+                    <div class="logo">
+                        <img src="@assetsFinder.path("images/logo.png")" alt="">
+                        <p>为孩子创造与众不同</p>
+                    </div>
+                    <div class="float-right">
+                        <ul class="">
+                            <li class="btn float-right"  onclick="show(event,'pop_up');">立即下载</li>
+                            <li class="float-right">联系我们</li>
+                            <li class="float-right">咚哒为你</li>
+                            <li class="float-right">关于咚哒</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>
+                            随时随地 <br>
+                            为0-12岁的孩子 <br>
+                            预订温暖的看顾,匹配与众不同 <br>
+                            的课程，安排非凡的体验活动
+                        </p>
+                        <img class="float-right" src="@assetsFinder.path("images/head_con.png")" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @welcome(message, style = "scala")
+        <div class="pop_up"  id="pop_up" style="display: none;" onclick="show(event,'pop_up');">
+            <div class="qr_head">
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="ios">
+                <img src="@assetsFinder.path("images/icon_apple@3x.png")" alt="">
+                <p>IOS版</p>
+            </div>
+            <div class="android">
+                <img src="@assetsFinder.path("images/icon_android@3x.png")" alt="">
+                <p>Android版</p>
+            </div>
+        </div>
+    </div>
+    <div class="home">
+        <div class="title">
+            <p>HOME，让家一般的温暖时刻伴随</p>
+            <p>是咚哒精选儿童教育服务的理念</p>
+        </div>
+        <ul>
+            <li class="h">
+                <p class="tit">Hope</p>
+                <p class="status">孩子，承载着家庭的希望</p>
+            </li>
+            <li class="o">
+                <p class="tit">Pportunity</p>
+                <p class="status">发现与众不同的学习机会</p>
+            </li>
+            <li class="m">
+                <p class="tit">Milestone</p>
+                <p class="status">关注每个成长的里程碑</p>
+            </li>
+            <li class="e">
+                <p class="tit">Enjoy</p>
+                <p class="status">欢笑，被定格在瞬间</p>
+            </li>
+        </ul>
+    </div>
+    <div class="con">
+        <div class="tips row">
+            <div class="left">
+                <img src="@assetsFinder.path("images/tips1.png")" alt="">
+            </div>
+            <div class="right">
+                <p class="con_title">为您精心筛选优质的看顾服务</p>
+                <p class="con_word">Daycare</p>
+                <div class="sentence">
+                    <p>在你附近 &nbsp;&nbsp;随时随地</p>
+                    <p>年龄细分 &nbsp;&nbsp;温暖贴心</p>
+                    <p>国际理念 &nbsp;&nbsp;环境友好</p>
+                </div>
+            </div>
+        </div>
+        <div class="tips row">
+            <div class="left l_right right">
+                <p class="con_title">为孩子精准匹配多元化的课程</p>
+                <p class="con_word">Problem Based learning </p>
+                <div class="sentence">
+                    <p>个性发展 &nbsp;&nbsp;自主成长</p>
+                    <p>专业引导 &nbsp;&nbsp;全面发掘</p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="@assetsFinder.path("images/tips2.png")" alt="">
+            </div>
+        </div>
+        <div class="tips row">
+            <div class="left">
+                <img src="@assetsFinder.path("images/tips3.png")" alt="">
+            </div>
+            <div class="right">
+                <p class="con_title">夏冬令营＆体验活动</p>
+                <p class="con_word">Summer/Winter Camp ＆ Day trip</p>
+                <div class="sentence">
+                    <p>拓宽视野 &nbsp;&nbsp;体验感悟</p>
+                    <p>突破自我 &nbsp;&nbsp;寓学于乐</p>
+                    <p>在体验中成长，留下美好的回忆</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-}
+    <div class="foot">
+        <img src="@assetsFinder.path("images/end.png")" alt="" class="ad_screen">
+        <p class="ad">咚哒，甄选素质教育服务 <br>
+            与您一起发现孩子发展的无限可能</p>
+        <div class="suit">
+            <div class="ios">
+                <img src="@assetsFinder.path("images/icon_apple@3x.png")" alt="">
+                <p>IOS版</p>
+            </div>
+            <div class="android">
+                <img src="@assetsFinder.path("images/icon_android@3x.png")" alt="">
+                <p>Android版</p>
+            </div>
+        </div>
+        <div class="qr">
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            <p>手机客户端下载</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>联系我们</h2>
+        <p>黑镜子科技（北京）有限公司</p>
+        <p>contact@@blackmirror.tech</p>
+        <p>北京市朝阳区东直门外斜街 东外56号文创园 一层111室</p>
+        <div class="qr qr_code">
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            <p style="color: #34384A;text-align: center;">微信客服</p>
+        </div>
+        <div class="foo"><a href="/privacy">隐私条款</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copyright © 2018 黑镜子科技（北京）有限公司 All rights reserved.
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备  &nbsp;&nbsp;&nbsp;京公安网安备 </div>
+    </div>
+    <script>
+        $(function () {
+            window.console.log("function start!")
+        })
+        var url = '#';
+        function show(evt,o){
+            evt.stopPropagation?evt.stopPropagation():evt.cancelBubble=true;
+            var o = document.getElementById(o);
+            o.style.display = "";
+        }
+        function hide(o){
+            var o = document.getElementById(o);
+            o.style.display = "none";
+            window.location = url;
+        }
+        document.onclick=function(){hide('pop_up');}
+    </script>
+</body>
+</html>

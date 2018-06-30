@@ -1,0 +1,382 @@
+body {
+    min-width: 1024px;
+    margin: 0;
+    padding: 0;
+    /*min-height: 2000px;*/
+    height: auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.head {
+    background: url("/assets/images/head.png");
+    background-size: 100% 576px;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 576px;
+    color: #fff;
+    display: inline-block;
+}
+.header {
+    position: relative;
+    top: 30px;
+    padding: 0 9%;
+}
+.header .logo img {
+    width: 47px;
+    height: 20px;
+    float: left;
+    /*display:block;*/
+}
+.header .logo p {
+    margin: 2px 0 0 10px;
+    float: left;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+}
+.header ul li {
+    padding: 0 30px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    cursor: pointer;
+}
+.header ul .btn {
+    height: 38px;
+    padding: 0 30px;
+    margin-left: 20px;
+    margin-top: -5px;
+    line-height: 38px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 4px 9px 0 rgba(52,56,74,0.20);
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #34384A;
+}
+.content {
+    margin-left: 0px;
+}
+.head .content p {
+    font-family: PingFangSC-Medium;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: calc(350px - 90px);
+    float: left;
+}
+.head .content img {
+    position: relative;
+    left: 90px;
+    width: 241px;
+    margin-top: 73px;
+}
+
+/*@media (min-width: 1200px) and (max-width: 1500px) {*/
+@media (max-width: 1500px) {
+    .head .content img {
+        position: relative;
+        left: 90px;
+        width: 241px;
+        margin-top: 73px;
+        margin-right: 9%;
+    }
+}
+
+.head .pop_up {
+    position: absolute;
+    width: 365px;
+    height: 200px;
+    background: rgba(12,35,43,.8);
+    right: 8%;
+    top: 12%;
+}
+.head .qr_head {
+    position: relative;
+    float: left;
+    left: 30px;
+    top: 35px;
+}
+.qr_head .img {
+    width: 132px;
+    height: 132px;
+    background: #fff;
+    box-shadow: 0 4px 9px 0 rgba(52, 56, 74, 1);
+}
+.head .pop_up .ios {
+    width: 143px;
+    height: 51px;
+    margin-top: 35px;
+}
+.head .pop_up .android {
+    width: 143px;
+    height: 51px;
+    margin-top: 10px;
+}
+.head .pop_up .ios img , .head .pop_up .android img {
+    width: 25px;
+    height: 25px;
+    margin-top:12px;
+}
+.head .pop_up .ios p , .head .pop_up .android p {
+    font-family: PingFangSC-Semibold;
+    font-size: 15px;
+    color: #000000;
+    line-height: 48px;
+}
+.head .pop_up .ios p {
+    margin-left: 20px;
+}
+.head .pop_up .android p {
+    margin-left: 10px;
+}
+.home {
+    width: 100%;
+    padding: 150px 8%;
+
+}
+.home .title {
+    text-align: center;
+    font-family: PingFangSC-Medium;
+    font-size: 30px;
+    color: #34384A;
+    letter-spacing: 1px;
+    line-height: 39px;
+    font-weight: bold;
+}
+.home .title p {
+    margin-left: -10%;
+}
+.home .h {
+    /*background: url("../img/h.png") no-repeat;*/
+    background: url("/assets/images/h.png") no-repeat;
+    background-size: contain;
+}
+.home .o {
+    /*background: url("../img/o.png") no-repeat;*/
+    background: url("/assets/images/o.png") no-repeat;
+    background-size: contain;
+    /*margin: 0 60px 0 60px;*/
+}
+.home .m {
+    background: url("/assets/images/m.png") no-repeat;
+    /*background: url("../img/m.png") no-repeat;*/
+    background-size: contain;
+    /*margin: 0 60px 0 0px;*/
+}
+.home .e {
+    /*background: url("../img/e.png") no-repeat;*/
+    background: url("/assets/images/e.png") no-repeat;
+    background-size: contain;
+}
+.home .h, .home .o, .home .m, .home .e {
+    width: 23%;
+    height: 190px;
+    float: left;
+    position: relative;
+    top:-70px;
+}
+.home  p.tit {
+    margin: 150px 0 0 30px;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #898c96;
+    letter-spacing: 1px;
+    line-height: 56px;
+}
+.home p.tit:first-letter {
+    font-size: 60px;
+    color: #898c96;
+}
+.home .status {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #5F6270;
+    letter-spacing: 1px;
+    margin-left: 30px;
+}
+.home p {
+   margin-top: -10px;
+}
+
+.con {
+    width: 100%;
+    padding: 100px 12%;
+}
+.left {
+    float: left;
+}
+.tips {
+    clear: both;
+}
+.tips img {
+    width: 360px;
+    height: 360px;
+}
+.right {
+    float:left;
+    /*padding: 60px 15%;*/
+    padding: 60px 0;
+}
+.right .con_title {
+    font-family: PingFangSC-Medium;
+    font-size: 24px;
+    color: #34384A;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.right .con_word {
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #B5B6BC;
+}
+.right .sentence {
+    margin-top: 30px;
+}
+.right .sentence p {
+    margin: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #5F6270;
+    letter-spacing: 1px;
+}
+.l_right {
+    padding: 130px 0;
+}
+.foot {
+    position: relative;
+    top: 80px;
+    /*background: url("../img/foot_bg.png");*/
+    background: url("/assets/images/foot_bg.png") no-repeat;
+    width: 100%;
+    height: 256px;
+    clear: both;
+}
+.foot .ad_screen {
+    width: 182px;
+    height: 286px;
+    position: relative;
+    left: 9%;
+    top: -30px;
+    display: inline;
+    float: left;
+}
+.foot .ad {
+    position: relative;
+    padding: 60px 0 0 30%;
+    font-family: PingFangSC-Medium;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 1.33px;
+}
+.ios , .android {
+    width: 107px;
+    height: 40px;
+    background: #fff;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    left: 13%;
+    margin: 20px;
+}
+.ios img, .android img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 10px;
+}
+.ios p , .android p {
+    font-family: PingFangSC-Semibold;
+    font-size: 11px;
+    color: #000000;
+    line-height: 38px;
+    float: left;
+    margin: 2px;
+}
+ .qr {
+    position: relative;
+    float: right;
+    top: -30%;
+    right: 10%;
+}
+ .qr .img {
+    width: 97px;
+    height: 97px;
+    background: #fff;
+    box-shadow: 0 4px 9px 0 rgba(52,56,74,1);
+}
+.qr .img img {
+    width: 88px;
+    height: 88px;
+}
+ .qr p {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.footer {
+    padding: 150px 9% 0 9%;
+}
+.footer h2 {
+    font-family: PingFangSC-Medium;
+    font-size: 15px;
+    color: #34384A;
+    letter-spacing: 1px;
+}
+.footer p {
+    font-family: PingFangSC-Regular;
+    font-size: 15px;
+    color: #5F6270;
+    margin: 2px 0;
+}
+.footer .foo {
+    opacity: 0.5;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #8A8C96;
+    letter-spacing: 0;
+    position: relative;
+    top: 60px;
+
+}
+.qr_code {
+    position: relative;
+    bottom: 90px;
+    right: 10px;
+}
+.p_header {
+    width: 100%;
+    height: 80px;
+    background: #34384A;
+}
+.p_header .logo p {
+    color: #fff;
+}
+.p_header ul li {
+    color: #fff;
+}
+.p_content {
+    padding: 30px 9%;
+}
+.p_content .p_title {
+    font-family: PingFangSC-Medium;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5F6270;
+    padding: 50px 0 20px 0;
+}
+.p_content .p_con {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #5F6270;
+}
+.p_footer {
+    position: relative;
+    bottom: -300px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
