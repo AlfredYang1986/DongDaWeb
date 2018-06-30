@@ -131,10 +131,10 @@ a {
 .head .pop_up .android p {
     margin-left: 10px;
 }
+
 .home {
     width: 100%;
     padding: 150px 8%;
-
 }
 .home .title {
     text-align: center;
@@ -149,35 +149,31 @@ a {
     margin-left: -10%;
 }
 .home .h {
-    /*background: url("../img/h.png") no-repeat;*/
     background: url("/assets/images/h.png") no-repeat;
     background-size: contain;
 }
 .home .o {
-    /*background: url("../img/o.png") no-repeat;*/
     background: url("/assets/images/o.png") no-repeat;
     background-size: contain;
-    /*margin: 0 60px 0 60px;*/
 }
 .home .m {
     background: url("/assets/images/m.png") no-repeat;
-    /*background: url("../img/m.png") no-repeat;*/
     background-size: contain;
-    /*margin: 0 60px 0 0px;*/
 }
 .home .e {
-    /*background: url("../img/e.png") no-repeat;*/
     background: url("/assets/images/e.png") no-repeat;
     background-size: contain;
 }
-.home .h, .home .o, .home .m, .home .e {
-    width: 23%;
+
+.home .dd-time {
+    width: 220px;
     height: 190px;
     float: left;
     position: relative;
-    top:-70px;
+    margin: 0 auto;
 }
-.home  p.tit {
+
+.home p.tit {
     margin: 150px 0 0 30px;
     font-family: PingFangSC-Regular;
     font-size: 20px;
@@ -200,15 +196,16 @@ a {
    margin-top: -10px;
 }
 
-.con {
-    width: 100%;
-    padding: 100px 12%;
+.tips-img {
+    text-align: center;
 }
-.left {
-    float: left;
+.tips-content {
+    top: 50%;
+    transform: translateY(-50%);
 }
-.tips {
-    clear: both;
+.tips-content-l {
+    top: 50%;
+    transform: translate(-100%, -50%);
 }
 .tips img {
     width: 360px;
@@ -219,7 +216,7 @@ a {
     /*padding: 60px 15%;*/
     padding: 60px 0;
 }
-.right .con_title {
+.con_title {
     font-family: PingFangSC-Medium;
     font-size: 24px;
     color: #34384A;
@@ -227,26 +224,24 @@ a {
     font-weight: bold;
     margin-bottom: 2px;
 }
-.right .con_word {
+.con_word {
     margin: 0;
     padding: 0;
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #B5B6BC;
 }
-.right .sentence {
+.sentence {
     margin-top: 30px;
 }
-.right .sentence p {
+.sentence p {
     margin: 0;
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #5F6270;
     letter-spacing: 1px;
 }
-.l_right {
-    padding: 130px 0;
-}
+
 .foot {
     position: relative;
     top: 80px;
@@ -256,6 +251,14 @@ a {
     height: 256px;
     clear: both;
 }
+.foot .ad_screen_1 {
+    width: 182px;
+    height: 286px;
+    position: relative;
+    top: -30px;
+    display: inline;
+}
+
 .foot .ad_screen {
     width: 182px;
     height: 286px;
@@ -264,6 +267,16 @@ a {
     top: -30px;
     display: inline;
     float: left;
+}
+
+.foot .ad_1 {
+    position: relative;
+    /*padding: 60px 0 0 30%;*/
+    font-family: PingFangSC-Medium;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 1.33px;
+    width: max-content;
 }
 .foot .ad {
     position: relative;
@@ -280,46 +293,49 @@ a {
     float: left;
     position: relative;
     border-radius: 5px;
-    left: 13%;
+    /*left: 13%;*/
     margin: 20px;
 }
-.ios img, .android img {
+
+.ios .dd-btn-img, .android .dd-btn-img {
     width: 20px;
     height: 20px;
     float: left;
-    margin: 10px;
+    /*margin: 10px;*/
 }
-.ios p , .android p {
+
+.ios .dd-btn-txt, .android .dd-btn-txt {
     font-family: PingFangSC-Semibold;
     font-size: 11px;
     color: #000000;
-    line-height: 38px;
-    float: left;
+    line-height: 20px;
     margin: 2px;
 }
- .qr {
-    position: relative;
-    float: right;
-    top: -30%;
-    right: 10%;
+
+.dd-mid-service {
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
 }
- .qr .img {
+
+.dd-qr-img {
     width: 97px;
     height: 97px;
     background: #fff;
     box-shadow: 0 4px 9px 0 rgba(52,56,74,1);
+    /*border: 1px solid blueviolet;*/
 }
-.qr .img img {
-    width: 88px;
-    height: 88px;
-}
- .qr p {
+
+.dd-qr-p {
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #FFFFFF;
+    width: max-content;
 }
+
 .footer {
-    padding: 150px 9% 0 9%;
+    /*padding: 150px 9% 0 9%;*/
+    padding-top: 150px;
 }
 .footer h2 {
     font-family: PingFangSC-Medium;
@@ -341,7 +357,7 @@ a {
     letter-spacing: 0;
     position: relative;
     top: 60px;
-
+    margin-bottom: 60px;
 }
 .qr_code {
     position: relative;

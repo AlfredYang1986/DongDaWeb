@@ -1,49 +1,29 @@
 @(implicit assetsFinder: AssetsFinder)
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>隐私政策</title>
-    <link rel="stylesheet" media="screen" href="@assetsFinder.path("stylesheets/style.css")">
-</head>
-<body>
-    <div class="p_header">
-        <div class="header">
-            <div class="logo">
-                <a href="/index"><img src="@assetsFinder.path("images/logo.png")" alt=""></a>
-                <p class="">为孩子创造与众不同</p>
-                <ul>
-                    <li class="btn float-right"  onclick="show(event,'pop_up');">立即下载</li>
-                    <li class="float-right">联系我们</li>
-                    <li class="float-right">咚哒为你</li>
-                    <li class="float-right">关于咚哒</li>
-                </ul>
-            </div>
+@main {
+<div class="p_content">
+    <h1>隐私政策</h1>
+    <p class="p_title">
+        能否看风景佛啊恐怕
+    </p>
+    <p class="p_con">
+        恶法萨嘎根据国家哦啊菩萨恶几个哦让阿门v老辜负大家哦让下面佛菩萨看到爬的
+    </p>
+</div>a
+
+<div class="footer p_footer">
+    <h2>联系我们</h2>
+    <p>黑镜子科技（北京）有限公司</p>
+    <p>contact@@blackmirror.tech</p>
+    <p>北京市朝阳区东直门外斜街 东外56号文创园 一层111室</p>
+    <div class="qr qr_code">
+        <div class="img">
+            <img src="" alt="">
         </div>
+        <p style="color: #34384A;text-align: center;">微信客服</p>
     </div>
-    <div class="p_content">
-        <h1>隐私政策</h1>
-        <p class="p_title">
-            能否看风景佛啊恐怕
-        </p>
-        <p class="p_con">
-            恶法萨嘎根据国家哦啊菩萨恶几个哦让阿门v老辜负大家哦让下面佛菩萨看到爬的
-        </p>
-    </div>
-    <div class="footer p_footer">
-        <h2>联系我们</h2>
-        <p>黑镜子科技（北京）有限公司</p>
-        <p>contact@@blackmirror.tech</p>
-        <p>北京市朝阳区东直门外斜街 东外56号文创园 一层111室</p>
-        <div class="qr qr_code">
-            <div class="img">
-                <img src="" alt="">
-            </div>
-            <p style="color: #34384A;text-align: center;">微信客服</p>
-        </div>
-        <div class="foo"><a href="/privacy">隐私条款</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copyright © 2018 黑镜子科技（北京）有限公司 All rights reserved.
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备  &nbsp;&nbsp;&nbsp;京公安网安备 </div>
-    </div>
-</body>
-</html>
+    <div class="foo"><a href="/privacy">隐私条款</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copyright © 2018 黑镜子科技（北京）有限公司 All rights reserved.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备  &nbsp;&nbsp;&nbsp;京公安网安备 </div>
+</div>
+}
+
