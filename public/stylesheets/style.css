@@ -1,5 +1,6 @@
 body {
     /*min-width: 1024px;*/
+    min-width: 596px;
     margin: 0;
     padding: 0;
     /*min-height: 2000px;*/
@@ -76,15 +77,17 @@ a {
 @media (max-width: 768px) {
     .head {
         background: url("/assets/images/head-768.png");
-        background-size: 100% 576px;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
+        height: 100%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1500px) {
     .head {
         background: url("/assets/images/head-1200.png");
-        background-size: 100% 576px;
+        background-size: 100% 100%;
+        /*background-size: 100% 576px;*/
         background-repeat: no-repeat;
     }
     .head .content img {
@@ -98,7 +101,8 @@ a {
 @media (min-width: 1500px) {
     .head {
         background: url("/assets/images/head-1500.png");
-        background-size: 100% 576px;
+        background-size: 100% 100%;
+        /*background-size: 100% 576px;*/
         background-repeat: no-repeat;
     }
 }
@@ -218,7 +222,7 @@ a {
     margin-left: 30px;
 }
 .home p {
-   margin-top: -10px;
+   /*margin-top: -10px;*/
 }
 
 .tips-img {
@@ -425,4 +429,47 @@ a {
     bottom: -300px;
     padding-top: 30px;
     border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .cell-not-display-tap {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cell-not-display {
+        display: none;
+    }
+    .cell-display-home img {
+        width: 100%
+    }
+    .home .dd-time {
+        background: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+    .home p.tit {
+        margin: 0 0 0 30px;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #898c96;
+        letter-spacing: 1px;
+        line-height: 56px;
+        width: 40%;
+        /*float: left;*/
+    }
+    .home .status {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #5F6270;
+        letter-spacing: 1px;
+        /*margin-left: 30px;*/
+        margin: 32px 0 0 0;
+    }
+    .ct-mid {
+        display: block;
+        margin-bottom: 0px;
+    }
 }

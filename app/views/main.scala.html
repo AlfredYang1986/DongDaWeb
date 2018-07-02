@@ -22,9 +22,9 @@
                         <div class="float-right">
                             <ul class="">
                                 <li class="btn float-right"  onclick="show(event,'pop_up');">立即下载</li>
-                                <li class="float-right">联系我们</li>
-                                <li class="float-right">咚哒为你</li>
-                                <li class="float-right">关于咚哒</li>
+                                <li class="float-right cell-not-display">联系我们</li>
+                                <li class="float-right cell-not-display">咚哒为你</li>
+                                <li class="float-right cell-not-display">关于咚哒</li>
                             </ul>
                         </div>
                         <div class="content">
@@ -34,7 +34,7 @@
                                 预订温暖的看顾,匹配与众不同 <br>
                                 的课程，安排非凡的体验活动
                             </p>
-                            <img class="float-right" src="@assetsFinder.path("images/head_con.png")" alt="">
+                            <img class="float-right cell-not-display cell-not-display-tap" src="@assetsFinder.path("images/head_con.png")" alt="">
                         </div>
                     </div>
                 </div>
@@ -61,6 +61,10 @@
         <script>
             $(function () {
                 window.console.log("function start!")
+                // 这里是一个巨大的bug
+                if ($(window).width() <= 768)
+                    $('.head').height($(window).height())
+                else $('.head').height("576px")
             })
             // var url = '#';
             function show(evt,o){
