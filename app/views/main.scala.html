@@ -59,21 +59,21 @@
 
         @content
         <script>
-                $(function () {
-                    window.console.log("function start!")
-                })
-                // var url = '#';
-                function show(evt,o){
-                    evt.stopPropagation?evt.stopPropagation():evt.cancelBubble=true;
-                    var o = document.getElementById(o);
-                    o.style.display = "";
-                }
-                function hide(o){
-                    var o = document.getElementById(o);
-                    o.style.display = "none";
-                    // window.location = url;
-                }
-                document.onclick=function(){hide('pop_up');}
+            $(function () {
+                window.console.log("function start!")
+            })
+            // var url = '#';
+            function show(evt,o){
+                evt.stopPropagation?evt.stopPropagation():evt.cancelBubble=true;
+                var o = document.getElementById(o);
+                o.style.display = "";
+            }
+            function hide(o){
+                var o = document.getElementById(o);
+                o.style.display = "none";
+                // window.location = url;
+            }
+            document.onclick=function(){hide('pop_up');}
         </script>
     </body>
 </html>

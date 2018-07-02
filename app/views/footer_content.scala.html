@@ -1,3 +1,5 @@
+@(implicit assetsFinder: AssetsFinder)
+
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -13,7 +15,7 @@
             <div class="position-relative">
                 <div class="position-absolute tips-content">
                     <div class="dd-qr-img">
-                        <img src="" alt="">
+                        <img src="@assetsFinder.path("images/qr-code.png")" alt="">
                     </div>
                     <p style="color: #34384A;text-align: center;">微信客服</p>
                 </div>
