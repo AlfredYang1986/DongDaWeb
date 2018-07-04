@@ -123,38 +123,15 @@ a {
     left: 30px;
     top: 35px;
 }
-.qr_head .img {
-    width: 132px;
-    height: 132px;
+.qr_head .img img {
+    width: 97px;
+    height: 97px;
     background: #fff;
     box-shadow: 0 4px 9px 0 rgba(52, 56, 74, 1);
 }
-.head .pop_up .ios {
-    width: 143px;
-    height: 51px;
-    margin-top: 35px;
-}
-.head .pop_up .android {
-    width: 143px;
-    height: 51px;
-    margin-top: 10px;
-}
-.head .pop_up .ios img , .head .pop_up .android img {
-    width: 25px;
-    height: 25px;
-    margin-top:12px;
-}
-.head .pop_up .ios p , .head .pop_up .android p {
-    font-family: PingFangSC-Semibold;
-    font-size: 15px;
-    color: #000000;
-    line-height: 48px;
-}
-.head .pop_up .ios p {
-    margin-left: 20px;
-}
-.head .pop_up .android p {
-    margin-left: 10px;
+
+.qr_head_container {
+    margin-top: 30px;
 }
 
 .home {

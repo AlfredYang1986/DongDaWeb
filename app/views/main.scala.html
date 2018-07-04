@@ -11,52 +11,7 @@
         <script type="text/javascript" src="@assetsFinder.path("javascripts/jquery-3.3.1.min.js")" ></script>
     </head>
     <body>
-        <div class="head">
-            <div class="container-fluid" >
-                <div class="header">
-                    <div class="container">
-                        <div class="logo">
-                            <img src="@assetsFinder.path("images/logo.png")" alt="">
-                            <p>为孩子创造与众不同</p>
-                        </div>
-                        <div class="float-right">
-                            <ul class="">
-                                <li class="btn float-right"  onclick="show(event,'pop_up');">立即下载</li>
-                                <li class="float-right cell-not-display">联系我们</li>
-                                <li class="float-right cell-not-display">咚哒为你</li>
-                                <li class="float-right cell-not-display">关于咚哒</li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <p>
-                                随时随地 <br>
-                                为0-12岁的孩子 <br>
-                                预订温暖的看顾,匹配与众不同 <br>
-                                的课程，安排非凡的体验活动
-                            </p>
-                            <img class="float-right cell-not-display cell-not-display-tap" src="@assetsFinder.path("images/head_con.png")" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pop_up"  id="pop_up" style="display: none;" onclick="show(event,'pop_up');">
-                <div class="qr_head">
-                    <div class="img">
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <div class="ios">
-                    <img src="@assetsFinder.path("images/icon_apple@3x.png")" alt="">
-                    <p>IOS版</p>
-                </div>
-                <div class="android">
-                    <img src="@assetsFinder.path("images/icon_android@3x.png")" alt="">
-                    <p>Android版</p>
-                </div>
-            </div>
-        </div>
-
+        @head_content(assetsFinder)
         @content
         <script>
             $(function () {
