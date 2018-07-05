@@ -215,8 +215,9 @@ a {
     transform: translateY(-50%);
 }
 .tips-content-l {
+    left: 50%;
     top: 50%;
-    transform: translate(-100%, -50%);
+    transform: translate(-20%, -50%);
 }
 .tips img {
     width: 360px;
@@ -280,14 +281,17 @@ a {
     float: left;
 }
 
-.foot .ad_1 {
+.foot .dd-title {
     position: relative;
-    /*padding: 60px 0 0 30%;*/
     font-family: PingFangSC-Medium;
     font-size: 24px;
     color: #FFFFFF;
     letter-spacing: 1.33px;
     width: max-content;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -o-max-content;
+    width: -ms-max-content;
 }
 .foot .ad {
     position: relative;
@@ -347,6 +351,10 @@ a {
     font-size: 14px;
     color: #FFFFFF;
     width: max-content;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -o-max-content;
+    width: -ms-max-content;
 }
 
 .footer {
