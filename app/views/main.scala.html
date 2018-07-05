@@ -16,23 +16,17 @@
         <script>
             $(function () {
                 window.console.log("function start!")
-                // 这里是一个巨大的bug
-                // if ($(window).width() <= 768)
-                //     $('.head').height($(window).height())
-                // else $('.head').height("800px")
+                $(window).scroll(function() {
+                    var cur = $(this).scrollTop()
+                    var aTop = 300;
+                    if (cur < aTop) {
+                        var ft = cur * 1.0 / aTop;
+                        $('nav').css("background-color", 'rgba(52, 56, 74, ' + ft + ')');
+                    } else {
+                        $('nav').css("background-color", 'rgba(52, 56, 74, 1.0)');
+                    }
+                });
             })
-            // var url = '#';
-            function show(evt,o){
-                evt.stopPropagation?evt.stopPropagation():evt.cancelBubble=true;
-                var o = document.getElementById(o);
-                o.style.display = "";
-            }
-            function hide(o){
-                var o = document.getElementById(o);
-                o.style.display = "none";
-                // window.location = url;
-            }
-            document.onclick=function(){hide('pop_up');}
         </script>
     </body>
 </html>
