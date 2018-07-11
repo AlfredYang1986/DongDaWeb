@@ -5,7 +5,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 GET     /index                      controllers.HomeController.index
-GET     /privacy                    controllers.HomeController.privacy
+#GET     /privacy                    controllers.HomeController.privacy
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(file)
